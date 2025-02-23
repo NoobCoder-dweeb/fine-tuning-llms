@@ -26,10 +26,13 @@ streamlit = "^1.42.2"
 
 [tool.poetry.group.dev.dependencies]
 torch = "^2.6.0"
-huggingface = "^0.0.1"
 matplotlib = "^3.10.0"
 seaborn = "^0.13.2"
 plotly = "^6.0.0"
 bitsandbytes = "^0.45.2"
 pert = "^2019.11"
+python-dotenv = "^1.0.1"
+transformers = "^4.49.0"
+huggingface-hub = "^0.29.1"
+datasets = "^3.3.2"
 

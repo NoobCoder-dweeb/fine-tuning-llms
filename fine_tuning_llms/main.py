@@ -1,0 +1,24 @@
+from transformers import DistilBertTokenizer, DistilBertModel
+from dotenv import load_dotenv
+import torch 
+
+if __name__ == '__main__':
+
+    """
+    tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-cased-distilled-squad')
+    model = DistilBertModel.from_pretrained('distilbert-base-cased-distilled-squad')
+
+    question, text = "Who was Jim Henson?", "Jim Henson was a nice puppet"
+
+    inputs = tokenizer(question, text, return_tensors="pt")
+    with torch.no_grad():
+        outputs = model(**inputs)
+
+    print(outputs)
+    """
+
+    from transformers import pipeline
+    classifier = pipeline("text-classification",model='bhadresh-savani/distilbert-base-uncased-emotion', return_all_scores=True)
+    prediction = classifier("I love using transformers. The best part is wide range of support and its easy to use", )
+    print(prediction)
+    
